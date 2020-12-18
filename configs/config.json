@@ -1,0 +1,7 @@
+{
+  "stagingUrl": "http://chat.truvisibility.net/",
+  "testpageUrl": "http://trutest.truvisibility.net",
+  "driverPath": "C:\\chromedriver_win32\\chromedriver.exe",
+  "login": "john-doe82@bk.ru",
+  "password": "QweRty13"
+}
