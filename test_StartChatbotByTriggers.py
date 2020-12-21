@@ -1,6 +1,8 @@
 import unittest
 import time
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 from ConfigManager import ConfigManager
 from pages.ChatbotPage import ChatbotPage
@@ -43,34 +45,26 @@ class StartChatbotTestCases(unittest.TestCase):
     def test_StartChatbotTrigger_ClickOnHTML_ChatIsStarting(self):  # Старт чатбота по триггеру Click on HTMl tag
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
+
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
         self.page.close_widget()
-        time.sleep(1)
 
         self.driver.switch_to.default_content()
 
         self.page.сhoose_TommyLee_chatbot()
-        time.sleep(4)
 
         self.page.go_to_list_of_triggers()
-        time.sleep(4)
 
         self.page.sorting_triggers_by_name()
-        time.sleep(1)
 
         self.page.enable_clickOnHTMLtag_trigger()
-        time.sleep(1)
 
         self.page.publish_chatbot()
-        time.sleep(15)
 
         config = ConfigManager.get_config()
 
@@ -78,7 +72,6 @@ class StartChatbotTestCases(unittest.TestCase):
         time.sleep(5)
 
         self.page.click_on_HTML_tag()
-        time.sleep(5)
 
         self.page.switch_to_widget()
 
@@ -89,42 +82,31 @@ class StartChatbotTestCases(unittest.TestCase):
     def test_StartChatbotTrigger_CurrentPageAddress_ChatIsStarting(self): # Старт чатбота по триггеру Current Page Address
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(5)
 
         self.page.switch_to_widget()
         self.page.close_widget()
-        time.sleep(1)
 
         self.driver.switch_to.default_content()
 
         self.page.сhoose_TommyLee_chatbot()
-        time.sleep(3)
 
         self.page.go_to_list_of_triggers()
-        time.sleep(4)
 
         self.page.deactivate_all_triggers()
-        time.sleep(3)
 
         self.page.sorting_triggers_by_name()
-        time.sleep(2)
 
         self.page.enable_currentPageAddress_trigger()
-        time.sleep(1)
 
         self.page.publish_chatbot()
-        time.sleep(15)
 
         config = ConfigManager.get_config()
 
         self.driver.get(config.testpage_url)
-        time.sleep(5)
 
         self.page.go_to_page_two()
         time.sleep(5)
@@ -138,38 +120,28 @@ class StartChatbotTestCases(unittest.TestCase):
     def test_StartChatbotTrigger_CurrentPageAddressFragment_ChatIsStarting(self): # Старт чатбота по триггеру Current Page Address Fragment
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
 
         self.page.close_widget()
-        time.sleep(1)
 
         self.driver.switch_to.default_content()
 
         self.page.сhoose_TommyLee_chatbot()
-        time.sleep(3)
 
         self.page.go_to_list_of_triggers()
-        time.sleep(4)
 
         self.page.deactivate_all_triggers()
-        time.sleep(3)
 
         self.page.sorting_triggers_by_name()
-        time.sleep(2)
 
         self.page.enable_currentPageAddressFragment_trigger()
-        time.sleep(1)
 
         self.page.publish_chatbot()
-        time.sleep(15)
 
         config = ConfigManager.get_config()
 
@@ -188,38 +160,27 @@ class StartChatbotTestCases(unittest.TestCase):
     def test_StartChatbotTrigger_CurrentPageAddressFragmentContains_ChatIsStarting(self): # Старт чатбота по триггеру Current Page Address Fragment Contains
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
 
         self.page.close_widget()
-        time.sleep(1)
-
         self.driver.switch_to.default_content()
 
         self.page.сhoose_TommyLee_chatbot()
-        time.sleep(3)
 
         self.page.go_to_list_of_triggers()
-        time.sleep(4)
 
         self.page.deactivate_all_triggers()
-        time.sleep(3)
 
         self.page.sorting_triggers_by_name()
-        time.sleep(2)
 
         self.page.enable_currentPageAddressFragmentContains_trigger()
-        time.sleep(1)
 
         self.page.publish_chatbot()
-        time.sleep(15)
 
         config = ConfigManager.get_config()
 
@@ -227,7 +188,6 @@ class StartChatbotTestCases(unittest.TestCase):
         time.sleep(5)
 
         self.page.click_demo_link()
-        time.sleep(5)
 
         self.page.switch_to_widget()
 
@@ -238,46 +198,34 @@ class StartChatbotTestCases(unittest.TestCase):
     def test_StartChatbotTrigger_CurrentPageAddressSegment_ChatIsStarting(self): # Старт чатбота по триггеру Current Page Address Segment
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
 
         self.page.close_widget()
-        time.sleep(1)
 
         self.driver.switch_to.default_content()
 
         self.page.сhoose_TommyLee_chatbot()
-        time.sleep(3)
 
         self.page.go_to_list_of_triggers()
-        time.sleep(4)
 
         self.page.deactivate_all_triggers()
-        time.sleep(3)
 
         self.page.sorting_triggers_by_name()
-        time.sleep(2)
 
         self.page.enable_currentPageAddressSegment_trigger()
-        time.sleep(1)
 
         self.page.publish_chatbot()
-        time.sleep(15)
 
         config = ConfigManager.get_config()
 
         self.driver.get(config.testpage_url)
-        time.sleep(5)
 
         self.page.go_to_page_two()
-        time.sleep(5)
 
         self.page.switch_to_widget()
 
@@ -288,46 +236,34 @@ class StartChatbotTestCases(unittest.TestCase):
     def test_StartChatbotTrigger_CurrentPageTitle_ChatIsStarting(self): # Старт чатбота по триггеру Current page title
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
 
         self.page.close_widget()
-        time.sleep(1)
 
         self.driver.switch_to.default_content()
 
         self.page.сhoose_TommyLee_chatbot()
-        time.sleep(3)
 
         self.page.go_to_list_of_triggers()
-        time.sleep(4)
 
         self.page.deactivate_all_triggers()
-        time.sleep(3)
 
         self.page.sorting_triggers_by_name()
-        time.sleep(2)
 
         self.page.enable_CurrentPageTitle_trigger()
-        time.sleep(1)
 
         self.page.publish_chatbot()
-        time.sleep(15)
 
         config = ConfigManager.get_config()
 
         self.driver.get(config.testpage_url)
-        time.sleep(5)
 
         self.page.go_to_page_three()
-        time.sleep(5)
 
         self.page.switch_to_widget()
 
@@ -338,43 +274,32 @@ class StartChatbotTestCases(unittest.TestCase):
     def test_StartChatbotTrigger_MetaTagTruChat_ChatIsStarting(self): # Старт чатбота по триггеру Meta tag TruChat
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
 
         self.page.close_widget()
-        time.sleep(1)
 
         self.driver.switch_to.default_content()
 
         self.page.сhoose_TommyLee_chatbot()
-        time.sleep(3)
 
         self.page.go_to_list_of_triggers()
-        time.sleep(4)
 
         self.page.deactivate_all_triggers()
-        time.sleep(3)
 
         self.page.sorting_triggers_by_name()
-        time.sleep(2)
 
         self.page.enable_MetaTagTruChat_trigger()
-        time.sleep(1)
 
         self.page.publish_chatbot()
-        time.sleep(15)
 
         config = ConfigManager.get_config()
 
         self.driver.get(config.testpage_url)
-        time.sleep(5)
 
         self.page.switch_to_widget()
 
@@ -385,49 +310,38 @@ class StartChatbotTestCases(unittest.TestCase):
     def test_StartChatbotTrigger_CurrentPageAddressFragmentChange_ChatIsStarting(self): # Старт чатбота по триггеру Page Address Fragment Change
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
 
         self.page.close_widget()
-        time.sleep(1)
 
         self.driver.switch_to.default_content()
 
         self.page.сhoose_TommyLee_chatbot()
-        time.sleep(3)
 
         self.page.go_to_list_of_triggers()
-        time.sleep(4)
 
         self.page.deactivate_all_triggers()
-        time.sleep(3)
 
         self.page.sorting_triggers_by_name()
-        time.sleep(2)
 
         self.page.enable_PageAddressFragmentChange_trigger()
-        time.sleep(1)
 
         self.page.publish_chatbot()
-        time.sleep(15)
 
         config = ConfigManager.get_config()
 
         self.driver.get(config.testpage_url)
-        time.sleep(5)
 
         self.page.click_demo_link()
-        time.sleep(2)
+        time.sleep(3)
 
         self.page.click_sadbot_link()
-        time.sleep(5)
+        time.sleep(3)
 
         self.page.switch_to_widget()
 
@@ -438,38 +352,28 @@ class StartChatbotTestCases(unittest.TestCase):
     def test_StartChatbotTrigger_PageLoaded_ChatIsStarting(self): # Старт чатбота по триггеру Page Loaded
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
 
         self.page.close_widget()
-        time.sleep(1)
 
         self.driver.switch_to.default_content()
 
         self.page.сhoose_TommyLee_chatbot()
-        time.sleep(3)
 
         self.page.go_to_list_of_triggers()
-        time.sleep(4)
 
         self.page.deactivate_all_triggers()
-        time.sleep(3)
 
         self.page.sorting_triggers_by_name()
-        time.sleep(2)
 
         self.page.enable_PageLoaded_trigger()
-        time.sleep(1)
 
         self.page.publish_chatbot()
-        time.sleep(15)
 
         config = ConfigManager.get_config()
 
@@ -485,47 +389,35 @@ class StartChatbotTestCases(unittest.TestCase):
     def test_StartChatbotTrigger_RefferingWebsiteAddress_ChatIsStarting(self): # Старт чатбота по триггеру Reffering Website Address
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
         self.page.close_widget()
-        time.sleep(1)
+
         self.driver.switch_to.default_content()
 
         self.page.сhoose_TommyLee_chatbot()
-        time.sleep(3)
 
         self.page.go_to_list_of_triggers()
-        time.sleep(4)
 
         self.page.deactivate_all_triggers()
-        time.sleep(3)
 
         self.page.sorting_triggers_by_name()
-        time.sleep(2)
 
         self.page.enable_RefferingWebsiteAddress_trigger()
-        time.sleep(1)
 
         self.page.publish_chatbot()
-        time.sleep(15)
 
         config = ConfigManager.get_config()
 
         self.driver.get(config.testpage_url)
-        time.sleep(5)
 
         self.page.go_to_page_two()
-        time.sleep(5)
 
         self.page.go_to_page_one()
-        time.sleep(5)
 
         self.page.switch_to_widget()
 
@@ -536,41 +428,31 @@ class StartChatbotTestCases(unittest.TestCase):
     def test_StartChatbotTrigger_TimeOnTheCurrentPage_ChatIsStarting(self): # Старт чатбота по триггеру Time On The Current Page
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
         self.page.close_widget()
-        time.sleep(1)
+
         self.driver.switch_to.default_content()
 
         self.page.сhoose_TommyLee_chatbot()
-        time.sleep(3)
 
         self.page.go_to_list_of_triggers()
-        time.sleep(4)
 
         self.page.deactivate_all_triggers()
-        time.sleep(3)
 
         self.page.sorting_triggers_by_name()
-        time.sleep(2)
 
         self.page.enable_TimeOnTheCurrentPageTitle_trigger()
-        time.sleep(1)
 
         self.page.publish_chatbot()
-        time.sleep(15)
 
         config = ConfigManager.get_config()
 
         self.driver.get(config.testpage_url)
-        time.sleep(5)
 
         self.page.switch_to_widget()
 
@@ -581,41 +463,31 @@ class StartChatbotTestCases(unittest.TestCase):
     def test_StartChatbotTrigger_UserFisrtTimeVisitor_ChatIsStarting(self): # Старт чатбота по триггеру User Is A First-time Visitor
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
         self.page.close_widget()
-        time.sleep(1)
+
         self.driver.switch_to.default_content()
 
         self.page.сhoose_TommyLee_chatbot()
-        time.sleep(3)
 
         self.page.go_to_list_of_triggers()
-        time.sleep(4)
 
         self.page.deactivate_all_triggers()
-        time.sleep(3)
 
         self.page.sorting_triggers_by_name()
-        time.sleep(2)
 
         self.page.enable_UserFisrtTimeVisitor_trigger()
-        time.sleep(1)
 
         self.page.publish_chatbot()
-        time.sleep(15)
 
         config = ConfigManager.get_config()
 
         self.driver.get(config.testpage_url)
-        time.sleep(5)
 
         self.page.switch_to_widget()
 

@@ -47,32 +47,25 @@ class ReviewPopUpTestCases(unittest.TestCase):
     def test_ReviewPopUp_PublishChatbot_ReviewPopUpsAppearance(self):  # Появление Review popups после определенного количества публикаций
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
         self.page.close_widget()
-        time.sleep(1)
 
         self.driver.switch_to.default_content()
 
         self.page.create_chat_bot()
-        time.sleep(3)
 
         a = 0
         while a <= 2:
             self.page.publish_chatbot()
-            time.sleep(1)
             a += 1
 
-        time.sleep(5)
-
         find_review_message = self.page.review_message()
+        time.sleep(2)
 
         self.assertEqual('Review This Template', find_review_message)
 
@@ -83,12 +76,10 @@ class ReviewPopUpTestCases(unittest.TestCase):
         a = 0
         while a <= 5:
             self.page.publish_chatbot()
-            time.sleep(1)
             a += 1
 
-        time.sleep(5)
-
         find_review_message = self.page.review_message()
+        time.sleep(2)
 
         self.assertEqual('Review This Template', find_review_message)
 
@@ -99,7 +90,6 @@ class ReviewPopUpTestCases(unittest.TestCase):
         a = 0
         while a <= 11:
             self.page.publish_chatbot()
-            time.sleep(1)
             a += 1
 
         time.sleep(5)
@@ -115,10 +105,10 @@ class ReviewPopUpTestCases(unittest.TestCase):
         a = 0
         while a <= 23:
             self.page.publish_chatbot()
-            time.sleep(1)
             a += 1
 
         find_review_message = self.page.review_message()
+        time.sleep(2)
 
         self.assertEqual('Review This Template', find_review_message)
 
@@ -131,39 +121,31 @@ class ReviewPopUpTestCases(unittest.TestCase):
     def test_ReviewPopUp_SendReviewMessage_PopupReviewDoesNotAppear(self):  # Проверка появления попап для ревью после того, как шаблон был оценен
 
         self.page.login_on_the_website()
-        time.sleep(8)
 
         self.page.close_product_tour()
-        time.sleep(5)
 
         self.page.go_to_list_of_chatbots()
-        time.sleep(3)
 
         self.page.switch_to_widget()
         self.page.close_widget()
-        time.sleep(1)
 
         self.driver.switch_to.default_content()
 
         self.page.create_chat_bot()
-        time.sleep(3)
 
         a = 0
         while a <= 2:
             self.page.publish_chatbot()
-            time.sleep(1)
             a += 1
 
-        time.sleep(5)
-
         find_review_message = self.page.review_message()
+        time.sleep(2)
 
         self.assertEqual('Review This Template', find_review_message)
 
         self.page.add_written_review()
-        time.sleep(3)
 
-        print('Review после 3 публикации успешно появилось')
+        print('Review после 3 публикации успешно появилось, отзыв оставлен')
 
         a = 0
         while a <= 6:
